@@ -23,7 +23,7 @@ export default function AddToDo({submitHandler}) {
     <View>
       <TextInput
         style={styles.input}
-        placeholder=' New Task'
+        placeholder='New Task'
         onChangeText={changeHandler}
       />
       <Button
@@ -39,21 +39,13 @@ export default function AddToDo({submitHandler}) {
 const styles = StyleSheet.create({
   input: {
     marginTop: 10,
-    marginBottom: 5,
-    // paddingHorizontal: 8,
-    // paddingVertical: 6,
+    marginBottom: 10,
     borderWidth: 1,
     borderColor: '#555',
-    // borderBottomWidth: 2,
-    // borderBottomColor: '#ddd',
-    // borderTopColor: '#eee',
-
-    // borderBottomColor: 'red',
-    // paddingTop: 16,
-    // marginTop: 16,
-    // borderColor: '#bbb',
-    // borderWidth: 1,
-    // borderStyle:  'dashed',
     borderRadius: 10,
+    paddingTop: 8,
+    paddingBottom: 4,
+    paddingLeft: 6,
+    backgroundColor: '#fff',
   },
 });
