@@ -1,11 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Todoitem({item, pressHandler}) {
  
   return (
     <TouchableOpacity onPress={()=> pressHandler(item.key)}>
-        <Text style={styles.item}>{item.text}</Text>
+      <View style={styles.item}>
+        <MaterialCommunityIcons name='trash-can-outline'size={18} color='#333'/>
+        <Text> - {item.text}</Text>
+      </View>    
     </TouchableOpacity>
   );
 }
@@ -21,5 +25,6 @@ const styles = StyleSheet.create({
     borderStyle:  'dashed',
     borderRadius: 10,
     backgroundColor: '#fff',
+    flexDirection: 'row'
   },
 });

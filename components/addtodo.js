@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import { StyleSheet, View, Text, TextInput, Button } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+//<MaterialIcons name='add-circle-outline'size={18} color='#333'/>
+// import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function AddToDo({submitHandler}) {
 
@@ -21,6 +24,7 @@ export default function AddToDo({submitHandler}) {
 
   return (
     <View>
+      {/* <MaterialIcons name='add-circle-outline'size={18} color='#333'/> */}
       <TextInput
         style={styles.input}
         placeholder='New Task'
@@ -29,6 +33,14 @@ export default function AddToDo({submitHandler}) {
       <Button
         onPress={()=>submitHandler(text)}
         // onPress={()=>addNewTodo(text)}
+        // icon={<MaterialIcons name='add-circle-outline'size={18} color='#333'/>}
+        // icon={
+        //   <Icon
+        //     name="arrow-right"
+        //     size={15}
+        //     color="white"
+        //   />
+        // }
         title='Add Task'
         color='coral'
       />
